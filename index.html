@@ -1,115 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SM Tech Hub - Home</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - SM Tech Hub</title>
+  <link href="style.css" rel="stylesheet" />
+  <script src="script.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <!-- HEADER -->
-  <header class="main-header">
-    <div class="logo">SM Tech Hub</div>
-    <div class="search-dark-toggle">
-      <input type="text" id="searchInput" placeholder="Search articles...">
-      <button id="darkToggle">🌙</button>
-    </div>
-    <nav class="desktop-nav">
-      <a href="index.html">Home</a>
-      <a href="trending.html">Trending</a>
-      <a href="blogs.html">Blogs</a>
-      <a href="tech-news.html">Tech News</a>
-      <a href="mobiles.html">Mobiles</a>
-      <a href="laptops.html">Laptops</a>
-      <a href="gadgets.html">Gadgets</a>
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-white">
+  
+<header class="bg-white dark:bg-gray-900 text-gray-800 dark:text-white shadow">
+  <div class="container mx-auto flex justify-between items-center p-4">
+    <div class="text-2xl font-bold">SM Tech Hub</div>
+    <nav class="hidden md:flex gap-4">
+      <a href="index.html" class="hover:text-indigo-500">Home</a>
+      <a href="blogs.html" class="hover:text-indigo-500">Blogs</a>
+      <a href="tech.html" class="hover:text-indigo-500">Tech</a>
+      <a href="mobiles.html" class="hover:text-indigo-500">Mobiles</a>
+      <a href="laptops.html" class="hover:text-indigo-500">Laptops</a>
+      <a href="gadgets.html" class="hover:text-indigo-500">Gadgets</a>
+      <a href="about.html" class="hover:text-indigo-500">About</a>
+      <a href="contact.html" class="hover:text-indigo-500">Contact</a>
     </nav>
-    <div class="auth-buttons">
-      <button>Register/Login</button>
-      <button>Subscribe</button>
+    <div class="md:hidden">
+      <button id="menu-btn" class="text-xl">☰</button>
     </div>
-    <button class="hamburger">&#8942;</button>
-    <nav class="mobile-nav hidden">
-      <a href="index.html">Home</a>
-      <a href="trending.html">Trending</a>
-      <a href="blogs.html">Blogs</a>
-      <a href="tech-news.html">Tech News</a>
-      <a href="mobiles.html">Mobiles</a>
-      <a href="laptops.html">Laptops</a>
-      <a href="gadgets.html">Gadgets</a>
-    </nav>
-  </header>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
+    <a href="index.html" class="block py-1">Home</a>
+    <a href="blogs.html" class="block py-1">Blogs</a>
+    <a href="tech.html" class="block py-1">Tech</a>
+    <a href="mobiles.html" class="block py-1">Mobiles</a>
+    <a href="laptops.html" class="block py-1">Laptops</a>
+    <a href="gadgets.html" class="block py-1">Gadgets</a>
+    <a href="about.html" class="block py-1">About</a>
+    <a href="contact.html" class="block py-1">Contact</a>
+  </div>
+</header>
 
-  <!-- SECTIONS -->
-  <main>
-    <!-- Reusable Section Component -->
-    <section class="category-section" id="trending">
-      <h2>Trending <a href="trending.html" class="view-all">View All</a></h2>
-      <div class="articles">
-        <!-- Repeat this block -->
-        <article class="card">
-          <img src="https://via.placeholder.com/300x150" alt="Trending 1">
-          <h3>Trending Article 1</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </article>
-        <!-- Repeat 5 total -->
+  
+<main class="p-4 grid gap-6">
+  <section>
+    <h2 class="text-xl font-semibold mb-4">Latest Blogs</h2>
+    <div class="grid md:grid-cols-3 gap-4">
+      <div class="border rounded shadow p-4 bg-white dark:bg-gray-800">
+        <h3 class="text-lg font-bold mb-2">AI Revolution</h3>
+        <p>Discover how AI is changing the tech industry.</p>
       </div>
-    </section>
-
-    <!-- Blogs -->
-    <section class="category-section" id="blogs">
-      <h2>Blogs <a href="blogs.html" class="view-all">View All</a></h2>
-      <div class="articles">
-        <!-- 5 dummy blog cards -->
+      <div class="border rounded shadow p-4 bg-white dark:bg-gray-800">
+        <h3 class="text-lg font-bold mb-2">Mobile Trends 2025</h3>
+        <p>The latest trends in smartphone technology.</p>
       </div>
-    </section>
-
-    <!-- Tech News -->
-    <section class="category-section" id="tech-news">
-      <h2>Tech News <a href="tech-news.html" class="view-all">View All</a></h2>
-      <div class="articles">
-        <!-- 5 dummy news cards -->
+      <div class="border rounded shadow p-4 bg-white dark:bg-gray-800">
+        <h3 class="text-lg font-bold mb-2">Laptop Showdown</h3>
+        <p>Compare the best laptops of the year.</p>
       </div>
-    </section>
-
-    <!-- Mobiles -->
-    <section class="category-section" id="mobiles">
-      <h2>Mobiles <a href="mobiles.html" class="view-all">View All</a></h2>
-      <div class="articles">
-        <!-- 5 dummy mobile cards -->
-      </div>
-    </section>
-
-    <!-- Laptops -->
-    <section class="category-section" id="laptops">
-      <h2>Laptops <a href="laptops.html" class="view-all">View All</a></h2>
-      <div class="articles">
-        <!-- 5 dummy laptop cards -->
-      </div>
-    </section>
-
-    <!-- Gadgets -->
-    <section class="category-section" id="gadgets">
-      <h2>Gadgets <a href="gadgets.html" class="view-all">View All</a></h2>
-      <div class="articles">
-        <!-- 5 dummy gadget cards -->
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-links">
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="follow.html">Follow</a>
     </div>
-    <div class="social-icons">
-      <a href="#"><img src="icon-fb.png" alt="Facebook"></a>
-      <a href="#"><img src="icon-x.png" alt="X"></a>
-      <a href="#"><img src="icon-insta.png" alt="Instagram"></a>
+  </section>
+
+  <section>
+    <h2 class="text-xl font-semibold mb-4">Top Products</h2>
+    <div class="grid md:grid-cols-3 gap-4">
+      <div class="border rounded shadow p-4 bg-white dark:bg-gray-800">
+        <img src="https://via.placeholder.com/150" alt="Product" class="mb-2">
+        <h3 class="font-bold">Smartphone X</h3>
+        <p>₹29,999</p>
+      </div>
+      <div class="border rounded shadow p-4 bg-white dark:bg-gray-800">
+        <img src="https://via.placeholder.com/150" alt="Product" class="mb-2">
+        <h3 class="font-bold">Laptop Pro</h3>
+        <p>₹59,999</p>
+      </div>
+      <div class="border rounded shadow p-4 bg-white dark:bg-gray-800">
+        <img src="https://via.placeholder.com/150" alt="Product" class="mb-2">
+        <h3 class="font-bold">Gadget Plus</h3>
+        <p>₹4,999</p>
+      </div>
     </div>
-    <button onclick="window.scrollTo(0,0)">↑ Go Up</button>
-  </footer>
+  </section>
+</main>
+
+  
+<footer class="bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-center p-4 mt-10">
+  <p>&copy; 2025 SM Tech Hub. All rights reserved.</p>
+  <button onclick="scrollToTop()" class="mt-2 px-3 py-1 bg-indigo-500 text-white rounded">Go Up</button>
+</footer>
+
 </body>
 </html>
