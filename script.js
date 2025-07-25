@@ -1,12 +1,6 @@
+const toggle = document.getElementById('toggle');
+const nav = document.getElementById('nav');
 
-const themeToggle = document.getElementById('themeToggle');
-const menuBtn = document.getElementById('menuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
-
-themeToggle?.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-});
-
-menuBtn?.addEventListener('click', () => {
-  mobileMenu.classList.toggle('hidden');
+toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
 });

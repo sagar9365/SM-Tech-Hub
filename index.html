@@ -1,95 +1,24 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Home - SM Tech Hub</title>
-  <meta name="description" content="Latest tech articles and news">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"/>
-  <script defer src="script.js"></script>
-</head>
-<body class="bg-white text-black dark:bg-gray-900 dark:text-white">
-
-    
-<header class="p-4 bg-gray-100 dark:bg-gray-800 shadow-md flex justify-between items-center">
-  <h1 class="text-2xl font-bold">SM Tech Hub</h1>
-  <nav class="hidden md:flex gap-4">
-    <a href="index.html">Home</a>
-    <a href="tech-news.html">Tech News</a>
-    <a href="mobiles.html">Mobiles</a>
-    <a href="laptops.html">Laptops</a>
-    <a href="gadgets.html">Gadgets</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-  <div class="flex items-center gap-2">
-    <input type="text" placeholder="Search..." class="px-2 py-1 rounded border hidden md:block">
-    <button id="themeToggle" class="px-2 py-1 rounded bg-gray-300 dark:bg-gray-600">🌓</button>
-    <button id="menuBtn" class="md:hidden">☰</button>
-  </div>
-</header>
-<div id="mobileMenu" class="hidden flex-col p-4 bg-gray-100 dark:bg-gray-800 md:hidden">
-  <a href="index.html">Home</a>
-  <a href="tech-news.html">Tech News</a>
-  <a href="mobiles.html">Mobiles</a>
-  <a href="laptops.html">Laptops</a>
-  <a href="gadgets.html">Gadgets</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-</div>
-
-    <section class="p-6">
-      <h2 class="text-xl font-semibold mb-4">Home</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-        
-        <div class="border rounded shadow p-4">
-          <img src="https://via.placeholder.com/400x200" alt="Article" class="mb-2 w-full">
-          <h3 class="font-bold text-lg">Article 1</h3>
-          <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        
-
-        <div class="border rounded shadow p-4">
-          <img src="https://via.placeholder.com/400x200" alt="Article" class="mb-2 w-full">
-          <h3 class="font-bold text-lg">Article 2</h3>
-          <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        
-
-        <div class="border rounded shadow p-4">
-          <img src="https://via.placeholder.com/400x200" alt="Article" class="mb-2 w-full">
-          <h3 class="font-bold text-lg">Article 3</h3>
-          <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        
-
-        <div class="border rounded shadow p-4">
-          <img src="https://via.placeholder.com/400x200" alt="Article" class="mb-2 w-full">
-          <h3 class="font-bold text-lg">Article 4</h3>
-          <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        
-
-        <div class="border rounded shadow p-4">
-          <img src="https://via.placeholder.com/400x200" alt="Article" class="mb-2 w-full">
-          <h3 class="font-bold text-lg">Article 5</h3>
-          <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        
-      </div>
-    </section>
-    
-<footer class="p-4 text-center text-sm text-gray-600 dark:text-gray-300 mt-10">
-  <div class="flex justify-center gap-4 mb-2">
-    <a href="#">Facebook</a>
-    <a href="#">Twitter</a>
-    <a href="#">YouTube</a>
-  </div>
-  <p>&copy; 2025 SM Tech Hub. All rights reserved.</p>
-  <button onclick="scrollTo(0,0)" class="block mx-auto mt-2">⬆ Go Up</button>
-</footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Navigation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="active" id="nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Works</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <button class="icon" id="toggle">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+      </button>
+    </nav>
+  </body>
+  <script src="script.js"></script>
 </html>
-
-    
